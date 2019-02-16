@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'GohuFont';
+    src: local('GohuFont'), url(../assets/GohuFont-Medium.ttf) format('ttf');
+}
+
+.app {
+    font-family: 'GohuFont'
+}

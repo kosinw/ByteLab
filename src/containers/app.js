@@ -4,7 +4,8 @@ import { Provider, observer } from 'mobx-react';
 import stores from '../lib/root.store';
 
 import Landing from './landing';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/navbar';
+import '../css/index.css'
 
 
 class App extends Component {
