@@ -5,8 +5,7 @@ const createStore = (auth, googleProvider) => {
         this.auth = auth;
         this.googleProvider = googleProvider;
 
-        auth.onAuthStateChanged(user => {
-            console.log(user);
+        auth.onAuthStateChanged(user => {            
             this.currentUser = user;
         });
 

@@ -33,6 +33,9 @@ const createStore = (db, auth) => {
             currentLab: new Lab('', defaultCode),
             labs: [],
             currentUser: null,
+            updateStore: () => {
+                localStorage.setItem('cached_lab', JSON.stringify(this.currentLab));
+            },
             addLab: action(name => {
                 if (!!this.currentUser) {
                     // do adding store code
@@ -44,7 +47,11 @@ const createStore = (db, auth) => {
         if (!!auth.currentUser) {
             this.currentUser = auth.currentUser;
         }
-    }
+
+        if (!!localStorage.getItem('cached_lab')) {
+            this.currentLab = JSON.parse(localStorage.getItem('cached_lab'));
+        }
+    }    
 
     return new LabStore(db, auth);
 }

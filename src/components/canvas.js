@@ -33,7 +33,8 @@ class Canvas extends React.Component {
             HEIGHT: CANVAS_SIZE,
             draw: null,
             init: null,
-            update: null
+            update: null,
+            BG: 3
         };
 
         Object.keys(globals).forEach(key => {
