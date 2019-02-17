@@ -10,12 +10,16 @@ class Account extends React.Component {
         this.props.login.signInWithGoogle();
     }
 
+    onLoggedInClicked = () => {
+        this.props.login.signOut();
+    }
+
     signInButton = () => (
         <li onClick={this.onAccountClicked}><a href="#">Sign In</a></li>
     );
 
     loggedIn = username => (
-        <li className="logged-in">Signed in as {username}</li>
+        <li onClick={this.onLoggedInClicked} className="logged-in"><a href="#">Signed in as {username}</a></li>
     );
 
     render() {

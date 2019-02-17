@@ -16,7 +16,6 @@ class CodeContainer extends React.Component {
 
     componentWillUnmount = () => {
         this.props.labs.updateStore();
-        console.log(window.localStorage.getItem('cached_lab'));
     }
 
     render() {
