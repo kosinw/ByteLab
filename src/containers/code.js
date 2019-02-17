@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
-import { observer } from 'mobx-react';
+import CodeEditor from '../components/code-editor'
+
 
 class Code extends Component {
-    constructor(props) {
-        super(props);
-        this.codeEditorRef = React.createRef();
-    }
-
-    componentDidMount() {
-    }
-
     render() {
         return (
             <section className="code">
-                <input className="code-editor" 
-                    ref={this.codeEditorRef} />
+                <CodeEditor />
             </section>
         );
     }
 }
 
-export default observer(Code);
+export default Code;
