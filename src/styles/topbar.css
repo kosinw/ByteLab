@@ -15,9 +15,14 @@
 
 .topbar__list li {
     padding: 1em;
+    font-size: 0.8em;
 }
 
 .topbar__list li a {
     text-decoration: none;
     color: #e2f3e4;
+}
+
+.topbar__list li a.selected {
+    color: #655f7e;
 }
