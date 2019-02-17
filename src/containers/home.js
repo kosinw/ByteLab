@@ -8,9 +8,9 @@ class Home extends React.Component {
         return (
             <div className="home">
               <h3 className ="home__title">ByteLab</h3>
-                <p className = "text__block">Welcome to ByteLab! This is a Javascript-based
-                toolset designed to help beginner coders get
-                hands-on game making experience. Sign up or log in to start working!</p>
+                <p className = "text__block">Welcome to ByteLab! This is a JavaScript-based toolset designed to help
+                beginner coders get hands-on game making experience. Use the code editor, sprite maker, and map designer
+                to create your own 2D game.</p>
                 <img src={BeegBeegYoshi}/>
             </div>
         );
