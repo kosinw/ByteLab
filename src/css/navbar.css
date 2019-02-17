@@ -3,11 +3,11 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
-    color: #111111;
+    color: #332431;
 }
 .navbar li {
-  display: block;
-  float: left;
-  padding: 8px;
-  background-color: #dddddd;
-}
+    display: block;
+    float: left;
+    padding: 8px;
+    background-color: #4c90a1;
+  }
