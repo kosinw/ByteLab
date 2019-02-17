@@ -14,7 +14,10 @@
 }
 
 .topbar__list li {
-    padding: 0.8em;
+    padding-top: 0.85em;
+    padding-bottom: 0.85em;
+    padding-right: 1.3em;
+    padding-left: 1.3em;
 }
 
 .topbar__list li a {

@@ -8,8 +8,8 @@ export default class Labs extends React.Component {
         const placeholder = ["proj1", "proj2"];
 
         return (
-          <div className = "labs">
-            {placeholder.map(x => <div>{x}</div>)}
+          <div >
+            {placeholder.map(x => <div className = "labs">{x}</div>)}
           </div>
         );
   }
