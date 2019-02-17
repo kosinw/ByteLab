@@ -28,3 +28,7 @@
 .topbar__list li a.selected {
     color: #54546a;
 }
+
+.logged-in {
+    height: 100%;
+}

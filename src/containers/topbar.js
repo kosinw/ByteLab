@@ -1,11 +1,13 @@
 import React from 'react';
 
 import { Link, withRouter } from 'react-router-dom';
+
+import Account from '../components/account';
+
 import '../styles/topbar.css';
 
 class Topbar extends React.Component {
-    onAccountClicked() {
-    }
+    
 
     render() {        
         return (
@@ -17,7 +19,8 @@ class Topbar extends React.Component {
                     <li><Link to="/sprites" className={this.props.location.pathname === '/sprites' ? 'selected' : ''}>Sprites</Link></li>
                     <li><Link to="/maps" className={this.props.location.pathname === '/maps' ? 'selected' : ''}>Maps</Link></li>
                     <li><Link to="/play" className={this.props.location.pathname === '/play' ? 'selected' : ''}>Play</Link></li>
-                    <li onClick={this.onAccountClicked}><a href="#">Sign In</a></li>
+
+                    <Account />
                 </ul>
             </nav>
         );
