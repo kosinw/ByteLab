@@ -22,7 +22,7 @@ class CodeContainer extends React.Component {
                 padding={10}
                 onValueChange={this.onTextUpdate}
                 style={{
-                    fontSize: 12,
+                    fontSize: '0.6em',
                 }}
             />
             </section>

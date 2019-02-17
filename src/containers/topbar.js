@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import '../styles/topbar.css';
 
 class Topbar extends React.Component {
@@ -8,16 +8,16 @@ class Topbar extends React.Component {
         return (
             <nav className="topbar">
                 <ul className="topbar__list">
-                    <li><Link to="/">ByteLab</Link></li>
-                    <li><Link to="/labs">Labs</Link></li>
-                    <li><Link to="/code">Code</Link></li>
-                    <li><Link to="/sprites">Sprites</Link></li>
-                    <li><Link to="/maps">Maps</Link></li>
-                    <li><Link to="/play">Play</Link></li>
+                    <li><Link to="/" className={this.props.location.pathname === '/' ? 'selected' : ''}>ByteLab</Link></li>
+                    <li><Link to="/labs" className={this.props.location.pathname === '/labs' ? 'selected' : ''}>Labs</Link></li>
+                    <li><Link to="/code" className={this.props.location.pathname === '/code' ? 'selected' : ''}>Code</Link></li>
+                    <li><Link to="/sprites" className={this.props.location.pathname === '/sprites' ? 'selected' : ''}>Sprites</Link></li>
+                    <li><Link to="/maps" className={this.props.location.pathname === '/maps' ? 'selected' : ''}>Maps</Link></li>
+                    <li><Link to="/play" className={this.props.location.pathname === '/play' ? 'selected' : ''}>Play</Link></li>
                 </ul>
             </nav>
         );
     }
 }
 
-export default Topbar;
+export default withRouter(Topbar);
