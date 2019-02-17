@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 
 import { highlight, languages } from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-python';
@@ -9,9 +9,7 @@ class CodeContainer extends React.Component {
     state = {code: ''}
 
     onTextUpdate = text => {
-        this.setState({
-            code: text
-        });
+        this.props.labs.currentLab.code = text;
     }
 
     render() {
@@ -19,7 +17,7 @@ class CodeContainer extends React.Component {
             <section className="code-container">
             <Editor
                 className="code-container__editor"
-                value={this.state.code}
+                value={this.props.labs.currentLab.code}
                 highlight={code => highlight(code, languages.python)}
                 padding={10}
                 onValueChange={this.onTextUpdate}
@@ -32,4 +30,4 @@ class CodeContainer extends React.Component {
     }
 }
 
-export default observer(CodeContainer);
+export default inject(stores => ({ labs: stores.labs }))(observer(CodeContainer));
