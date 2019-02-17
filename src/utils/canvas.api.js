@@ -127,6 +127,10 @@ const setPixel = ({ ctx, x, y, color }) => {
     ctx.fillRect(x, y, 1, 1);
 }
 
+const clear = ({ ctx }) => {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+}
+
 const print = ({ ctx, x, y, str, color }) => {
     const c = colors[color % colors.length];
 
@@ -147,7 +151,10 @@ const createAPI = ({ ctx, width, height }) => {
         },
         line(x1, y1, x2, y2, color) {
             line({ctx, x1, y1, x2, y2, color});
-        }        
+        },
+        clear() {
+            clear({ ctx });
+        }
     };
 };
 

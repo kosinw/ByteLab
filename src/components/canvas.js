@@ -4,6 +4,10 @@ import { observer, inject } from 'mobx-react';
 import createAPI from '../utils/canvas.api';
 
 const CANVAS_SIZE = 256;
+const FPS = 60;
+const TIME_PER_FRAME = 1000 / FPS;
+
+const getFramesPerTime = time => FPS * time;
 
 class Canvas extends React.Component {
     
@@ -25,6 +29,8 @@ class Canvas extends React.Component {
                 height: CANVAS_SIZE
             }),
             CANVAS_SIZE,
+            WIDTH: CANVAS_SIZE,
+            HEIGHT: CANVAS_SIZE,
             draw: null,
             init: null,
             update: null
@@ -45,11 +51,12 @@ class Canvas extends React.Component {
         this.createGlobals();
 
         const skeleton = `
-            let draw = () => {};
-            let update = () => {};
-            let init = () => {};
+            draw = () => {};
+            update = () => {};
+            init = () => {};
         `;
         
+        // eslint-disable-next-line no-eval
         eval(`
             ${shadowString}
 
@@ -61,11 +68,35 @@ class Canvas extends React.Component {
             window.update = update;
             window.init = init;
         `);        
+
+        this.draw = window.draw;
+        this.update = window.update;
+        this.init = window.init;
+    }
+
+    setupGameLoop() {        
+        this.gameLoop = window.requestAnimationFrame(this.onFrame);
+    }
+
+    cancelGameLoop() {
+        window.cancelAnimationFrame(this.gameLoop);
+    }
+
+    onFrame = (timestamp) => {
+        this.update();
+        this.draw();
+        this.gameLoop = window.requestAnimationFrame(this.onFrame);
+    }
+
+    componentWillUnmount = () => {
+        this.cancelGameLoop();
     }
 
     componentDidMount = () => {        
         this.ctx = this.canvasRef.current.getContext('2d');
         this.evalCode();
+        this.init();
+        this.setupGameLoop();
     }
 
     render() {
