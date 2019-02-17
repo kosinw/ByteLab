@@ -17,7 +17,7 @@ class Navbar extends Component {
                 </ul>
             </nav>
         );
-    }   
-}   
+    }
+}
 
 export default inject(stores => {})(Navbar);
