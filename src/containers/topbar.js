@@ -15,6 +15,9 @@ class Topbar extends React.Component {
                     <li><Link to="/maps" className={this.props.location.pathname === '/maps' ? 'selected' : ''}>Maps</Link></li>
                     <li><Link to="/play" className={this.props.location.pathname === '/play' ? 'selected' : ''}>Play</Link></li>
                 </ul>
+                <ul className="topbar__list">
+                  <li><Link to="/account" className={this.props.location.pathname === '/account' ? 'selected' : ''}>Account</Link></li>
+                </ul>
             </nav>
         );
     }
