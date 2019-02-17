@@ -6,3 +6,8 @@
 .app {
     font-family: 'GohuFont'
 }
+
+body {
+  background-color: #202020;
+  color: #ededed;
+}
