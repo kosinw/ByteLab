@@ -8,7 +8,7 @@ class Topbar extends React.Component {
       //dropdown this bitch
     }
 
-    render() {
+    render() {        
         return (
             <nav className="topbar">
                 <ul className="topbar__list">
@@ -18,7 +18,7 @@ class Topbar extends React.Component {
                     <li><Link to="/sprites" clas1sName={this.props.location.pathname === '/sprites' ? 'selected' : ''}>Sprites</Link></li>
                     <li><Link to="/maps" className={this.props.location.pathname === '/maps' ? 'selected' : ''}>Maps</Link></li>
                     <li><Link to="/play" className={this.props.location.pathname === '/play' ? 'selected' : ''}>Play</Link></li>
-                    <li onClick={this.onAccountClicked}>Sign In</li>
+                    <li onClick={this.onAccountClicked}><a href="#">Sign In</a></li>
                 </ul>
             </nav>
         );
