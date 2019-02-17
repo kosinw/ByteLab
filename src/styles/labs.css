@@ -1,4 +1,5 @@
-#labbs {
-  text-align: center;
-  font-size: 1.5em;
+#labs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
