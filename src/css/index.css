@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'GohuFont';
+    src: local('GohuFont'), url(../assets/GohuFont-Medium.ttf) format('ttf');
+}
+
+.app {
+    font-family: 'GohuFont'
+}
+
+body {
+  background-color: #202020;
+  color: #ededed;
+}
