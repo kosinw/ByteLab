@@ -7,7 +7,6 @@ class Topbar extends React.Component {
     onAccountClicked() {
       //dropdown this bitch
     }
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     render() {
         return (
