@@ -14,7 +14,7 @@ export default class Labs extends React.Component {
           <div>
             <h3 className = "labs__title">Labs</h3>
             <div className = "labs">
-              {placeholder.map(x => <div className = "projects" onClick={this.onLabClicked()} >{x}</div>)}
+              {placeholder.map(x => <button className = "projects" onClick={this.onLabClicked} >{x}</button>)}
             </div>
           </div>
         );
