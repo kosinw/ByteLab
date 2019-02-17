@@ -1,10 +1,15 @@
 import React from 'react';
 
-public class Play extends React.Component {
+import Canvas from '../components/canvas'
+
+class Play extends React.Component {
     render() {
         return (
             <section className="play">
+                <Canvas />
             </section>
         );
     }
 }
+
+export default Play;

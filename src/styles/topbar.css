@@ -21,3 +21,7 @@
     text-decoration: none;
     color: #e2f3e4;
 }
+
+.topbar__list li a.selected {
+    color: #54546a;
+}
