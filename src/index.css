@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Proggy';
+  font-style: normal;
+  src: local('Proggy'), url(./fonts/Proggy.ttf) format('ttf');
+}
+
+.app {
+    font-family: 'Proggy', monospace;
+}
