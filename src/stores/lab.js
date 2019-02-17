@@ -1,19 +1,36 @@
 import { extendObservable, action } from 'mobx';
 
-function Lab(name: '') {
+function Lab(name: '', code: '') {
     extendObservable(this, {
         name,
-        code: '',
+        code,
         sprites: []
     });
 }
+
+const defaultCode = `
+// here put your initialization code
+let init = () => {
+
+};
+
+// here put your drawing logic
+let draw = () => {
+
+};
+
+// here put your update logic
+let update = () => {
+
+};
+`;
 
 const createStore = (db, auth) => {
     function LabStore(db, auth) {
         this.ref = db.ref("labs");
 
         extendObservable(this, {
-            currentLab: new Lab(),
+            currentLab: new Lab('', defaultCode),
             labs: [],
             currentUser: null,
             addLab: action(name => {

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Canvas from '../components/canvas'
+import '../styles/play.css';
 
 class Play extends React.Component {
     render() {

@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'mobx-react';
 import stores from './stores/root'
 
-import './styles/syntax.css'
+import './styles/syntax.css';
 
 ReactDOM.render(
 <Provider {...stores}>
