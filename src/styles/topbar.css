@@ -1,0 +1,23 @@
+.topbar {
+    background-color: #303042;
+    width: 100%;
+}
+
+.topbar__list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 9;
+    
+}
+
+.topbar__list li {
+    padding: 1em;
+}
+
+.topbar__list li a {
+    text-decoration: none;
+    color: #e2f3e4;
+}
