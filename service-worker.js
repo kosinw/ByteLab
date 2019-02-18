@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/bytelab/precache-manifest.61f0a82121dabe6515aca6fe23c53505.js"
+  "/bytelab/precache-manifest.87933a3f1b984c44a54239db7041a7ed.js"
 );
 
 workbox.clientsClaim();
