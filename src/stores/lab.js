@@ -28,6 +28,7 @@ update = () => {
 const createStore = (db, auth) => {
     function LabStore(db, auth) {
         this.ref = db.ref("labs");
+        this.auth = auth;
 
         extendObservable(this, {
             currentLab: new Lab('', defaultCode),
@@ -36,12 +37,6 @@ const createStore = (db, auth) => {
             updateStore: () => {
                 localStorage.setItem('cached_lab', JSON.stringify(this.currentLab));
             },
-            addLab: action(name => {
-                if (!!this.currentUser) {
-                    // do adding store code
-                } else {
-                }
-            })
         });
 
         if (!!auth.currentUser) {

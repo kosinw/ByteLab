@@ -13,6 +13,8 @@ class Labs extends React.Component {
         return (
           <div>
             <h3 className = "labs__title">Labs</h3>
+            <button className="labs__new_lab">New Lab</button>
+            <button className="labs__save_lab">Save Lab</button>
             <div className = "labs">
               {/* {placeholder.map(x => <button className = "projects" onClick={this.onLabClicked} >{x}</button>)} */}
             </div>
