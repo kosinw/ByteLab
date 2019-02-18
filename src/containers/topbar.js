@@ -10,8 +10,6 @@ class Topbar extends React.Component {
     
 
     render() {
-        const { currentUser } = this.props.login;
-
         return (
             <nav className="topbar">
                 <ul className="topbar__list">
